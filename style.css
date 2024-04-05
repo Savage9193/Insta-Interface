@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+    font-family: 'gilroy';
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color:rgb(0, 208, 255)  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+#card{
+    height: 550px;
+    width: 320px;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 3px solid #000;
+    position: relative;
+    overflow: scroll;
+
+} 
+#card::-webkit-scrollbar{
+    display: none;
+}
+#storiyan{
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid #dadada;
+    padding: 15px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden; 
+}
+#storiyan::-webkit-scrollbar{
+    display: none;
+}
+.story{
+   border: 3px solid red;
+    height:90px;
+    border-radius: 50%;
+    width: 90px;
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 5px;
+
+}
+.story img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#full-screen{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    display: none;
+}
+
+
+
+
+
+
+#post{
+    height: 400px;
+    width: 350px;
+    top: 0.1px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+#post img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#post i{
+    color: #fff;
+    font-size: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    opacity: 0;
+    transition: transform ease 0.5s;
+}
+#post h1{
+    background-color: rgb(165, 217, 217);
+    height: 35px;
+    width: 100%;
+   
+}
+
+
+
+
