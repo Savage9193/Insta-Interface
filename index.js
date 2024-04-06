@@ -22,7 +22,8 @@ arr.forEach(function(elem,idx){
 storiyan.innerHTML =clutter
  
 storiyan.addEventListener("click",function(dets){
-   con.style.display="none"
+   post1.style.display="none"
+   post2.style.display="none"
   
    
    document.querySelector("#full-screen").style.display="block"
@@ -32,7 +33,8 @@ storiyan.addEventListener("click",function(dets){
     
    setTimeout(function(){
     document.querySelector("#full-screen").style.display="none"
-    con.style.display="block"
+    post1.style.display="block"
+    post2.style.display="block"
     
    },2000)
 })
@@ -42,14 +44,14 @@ storiyan.addEventListener("click",function(dets){
 
 
 
-var con = document.querySelector("#post")
-var love = document.querySelector("i")
+var post1 = document.querySelector("#post1")
+var love = document.querySelector("#fir")
 
 
 
 
 
-con.addEventListener("dblclick" , function (){
+post1.addEventListener("dblclick" , function (){
    love.style.transform='translate(-50%,-50%) scale(1)'
    love.style.opacity=0.8
    love.style.color="red"
@@ -62,6 +64,60 @@ con.addEventListener("dblclick" , function (){
     
    },2000)
 });
+
+var post2 = document.querySelector("#post2")
+var love2 = document.querySelector("#sec")
+
+
+
+
+
+post2.addEventListener("dblclick" , function (){
+   love2.style.transform='translate(-50%,-50%) scale(1)'
+   love2.style.opacity=0.8
+   love2.style.color="red"
+
+   setTimeout(function(){
+    love2.style.opacity= 0
+   },1000)
+   setTimeout(function(){
+    love2.style.transform='translate(-50%,-50%) scale(0)'
+    
+   },2000)
+});
+
+
+
+
+
+
+var istatus = document.querySelector("h6")
+
+
+var btn = document.querySelector("#add")
+
+
+var flag=0;
+btn.addEventListener("click",function(){
+    if (flag ==0)
+    {
+    istatus.innerHTML = "Friend"
+    istatus.style.color ="green"
+    btn.innerHTML = "Following"
+    btn.style.background="#a0a3a3"
+    flag=1
+}
+    else{
+        istatus.innerHTML = "Unfriend"
+        istatus.style.color ="red"
+        btn.innerHTML = "Follow"
+        btn.style.background="cadetblue"
+        
+        flag=0
+}
+
+})
+
 
 
 
